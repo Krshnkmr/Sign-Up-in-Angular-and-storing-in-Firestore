@@ -1,0 +1,62 @@
+<!-- <p>register works!</p> -->
+<div class="container">
+    <div class="row">
+        <h2 class="h2">Creative Sign Up Form</h2>
+        <div class="border1 col-8">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label>Firstname</label>
+                    <input type="text" formControlName="firstname" class="form-control">
+                    <!-- <div *ngIf="firstname.errors." -->
+                    <div *ngIf="firstname.touched && firstname.invalid" class="alert alert-danger">
+                        <div *ngIf="firstname.errors.required">firstname is required</div>
+                        <div *ngIf="firstname.errors.minlength">Minimum length is 6</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Lastname</label>
+                    <input type="text" formControlName="lastname" class="form-control">
+                    <div *ngIf="lastname.touched && lastname.invalid" class="alert alert-danger">
+                        <div *ngIf="lastname.errors.required">lastname is required</div>
+                        <div *ngIf="lastname.errors.minlength">Minimum length is 3</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" formControlName="email" class="form-control">
+                    <div *ngIf="email.touched && email.invalid" class="alert alert-danger">
+                        <div *ngIf="email.errors.required">email is required</div>
+                        <div *ngIf="email.errors.email">Please enter valid email</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="text" formControlName="phonenumber" class="form-control">
+                    <div *ngIf="phonenumber.touched && phonenumber.invalid" class="alert alert-danger">
+                        <div *ngIf="phonenumber.errors.required">phonenumber is required</div>
+                        <div *ngIf="phonenumber.errors.phonenumbervalidator">Mobile number should have 10 digits
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Country</label>
+                    <select formControlName="country">
+                        <option [ngValue]="''" disabled>Select Country</option>
+                        <option *ngFor="let country of countries" [ngValue]="country.id">{{country.name}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" formControlName="city" class="form-control">
+                    <div *ngIf="city.touched && city.invalid" class="alert alert-danger">
+                        <div *ngIf="city.errors.required">Please enter your city name</div>
+                        <div *ngIf="city.errors.minlength">City name should have atleast 2 characters.</div>
+                    </div>
+                </div>
+                <!-- [disabled] ="!form.valid" -->
+                <button class="btn btn-success" type="submit" [disabled]="!form.valid">Register</button><br>
+                <button class="btn btn-secondary" type="reset" [disabled]="form.valid">Reset</button>
+            </form>
+        </div>
+    </div>
+</div>

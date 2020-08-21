@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyBZq5kZwtM6wTcJfO8TFsF0tRmY_an_r0Y",
+    authDomain: "reactive-form-validation.firebaseapp.com",
+    databaseURL: "https://reactive-form-validation.firebaseio.com",
+    projectId: "reactive-form-validation",
+    storageBucket: "reactive-form-validation.appspot.com",
+    messagingSenderId: "275706884379",
+    appId: "1:275706884379:web:6cd144b96501b04c7823be",
+    measurementId: "G-SJQ43ZJRV2"
+  }
 };
 
 /*

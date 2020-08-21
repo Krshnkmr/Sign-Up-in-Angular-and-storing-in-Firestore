@@ -1,0 +1,41 @@
+h2
+{
+    padding-top: 15px;
+    color: white;
+    font-family: 'Nanum Myeongjo';
+    text-align: center;
+    padding-left: 100px;
+}
+.container
+{
+    justify-content: center;
+    font-family: 'Nanum Myeongjo';
+    padding-left: 330px;
+    color: #ffffff;
+}
+.form-control
+{
+    /* the background color inherit will choose the default layer of background color */
+    background-color: inherit;
+    color: white;
+}
+.border1
+{
+    background-color: rgb(17, 102, 17);
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-top: 15px;
+    border: 1px solid inherit
+}
+.btn-success
+{
+    width: 500px;
+    color: white;
+    font-family: 'Nanum Myeongjo';
+}
+.btn-secondary
+{
+    width: 500px;
+    font-family: 'Nanum Myeongjo';
+}
